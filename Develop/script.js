@@ -1,3 +1,65 @@
+var lowercaseString = "abcdefghijklmnopqrstuvwxyz"
+var uppercaseString = lowercaseString.toUpperCase()
+var numericString = "0123456789"
+var specialString = "!@#$%^&*-+"
+
+function generatePassword() {
+  
+  var superString = "";
+
+  for (var i = 8; i < 128; i++) {
+    Math.floor(Math.random() * 128) + 8;
+  };
+
+  var length = prompt("How long do you want your password to be?");
+ 
+  console.log(length);
+
+  if (length < 8) {
+  alert("Password must be between 8 and 128 characters.");
+  return
+}
+
+  if (length > 128) {
+  alert("Password must be between 8 and 128 characters.");
+  return
+}
+
+  var lowercase = confirm("Do you want lowercase characters?");
+  var uppercase = confirm("Do you want uppercase characters?");
+  var numeric = confirm("Do you want numeric characters?");
+  var special = confirm("Do you want special characters?");
+
+  console.log(lowercase, uppercase, numeric, special)
+
+  if (lowercase) {
+    console.log("Do you want lowercase characters?")
+    superString = superString + lowercaseString
+    console.log(superString)
+}
+
+  if (uppercase) {
+    console.log("Do you want uppercase characters?")
+    superString = superString + uppercaseString
+    console.log(superString)
+}
+
+  if (numeric) {
+    console.log("Do you want numeric characters?")
+    superString = superString + numericString
+    console.log(superString)
+}
+
+  if (special) {
+    console.log("Do you want special characters?")
+    superString = superString + specialString
+    console.log(superString)
+}
+
+return superString
+
+};
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -7,34 +69,11 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-  var length = "How long do you want your password to be?";
-  var lowercase = "Do you want lowercase characters?";
-  var uppercase = "Do you want uppercase characters?";
-  var numeric = "Do you want numeric characters?";
-  var special = "Do you want special characters?"
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); 
 
-console.log("Do you want lowercase characters?")
-console.log("Do you want uppercase characters?")
-console.log("Do you want numeric characters?")
-console.log("Do you want special characters?")
-
-if (length) {
-  console.log("How long do you want your password to be?");
-} else {
-  console.log("Password must be between 8 and 128 characters.");
-}
-
-//prompt for length of password
-//between 8 and 128 characters
-//propmt for character types
-//confirm whether or not to include lowercase, uppercase, numeric, and/or special
-//when each prompt is answered,
-//input should be validated and at least one character type should be selected
 //when all prompts are answered,
 //the password generated should match the selected criteria
 //when the password is generated,
