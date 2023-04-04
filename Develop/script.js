@@ -2,14 +2,10 @@ var lowercaseString = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseString = lowercaseString.toUpperCase()
 var numericString = "0123456789"
 var specialString = "!@#$%^&*-+"
-
+var password = " "
 var securePassword = [];
 
 function generatePassword() {
-
-//   for (var i = 0; i < length; i++) {
-//     var random = Math.floor(Math.random() * securePassword.length);
-// }
 
   var length = prompt("How many characters do you want your password to be?");
  
@@ -61,11 +57,13 @@ function generatePassword() {
     console.log(securePassword)
 }
 
-function random(securePassword) {
+for (var i = 0; i<Number(length); i++) {
   var randIndex = Math.floor(Math.random() * securePassword.length);
   var randChar = securePassword[randIndex]
-  return randChar;
+  password += randChar;
 }
+
+return password
 
 };
 
@@ -84,5 +82,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); 
+generateBtn.addEventListener("click", writePassword);
 
