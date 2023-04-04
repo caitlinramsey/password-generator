@@ -6,3 +6,5 @@ For this project, we were given starter code. Our task was to add code which wou
 ![password-generator](https://user-images.githubusercontent.com/60635509/229907610-ba1f2521-2b90-4732-9797-29411fbe7cdf.png)
 
 
+Here is the link to the deployed application: https://caitlinramsey.github.io/password-generator/
+
